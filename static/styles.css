@@ -1,4 +1,9 @@
-.required-asterisk { color: red; }
+.content-container
+{
+    border-radius: 1em;
+    border: 1px solid rgb(62, 68, 70);
+    padding: 2em !important;
+}
 
 .form-field-wrapper
 {
