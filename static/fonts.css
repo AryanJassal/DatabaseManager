@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.fw-900 { font-weight: 900; }
+.fw-800 { font-weight: 800; }
+.fw-700 { font-weight: 700; }
+.fw-600 { font-weight: 600; }
+.fw-500 { font-weight: 500; }
+.fw-400 { font-weight: 400; }
+.fw-300 { font-weight: 300; }
+.fw-200 { font-weight: 200; }
+.fw-100 { font-weight: 100; }
+.fw-lighter { font-weight: lighter; }
+.fw-normal { font-weight: normal; }
+.fw-bold { font-weight: bold; }
+.fw-bolder { font-weight: bolder; }
+
+.text-white { color: white; }
+.text-black { color: black; }
+
+.italic { font-style: italic; }
+
+.font-comfortaa { font-family: 'Comfortaa', cursive; }
+.font-montserrat-alternatives { font-family: 'Montserrat Alternates', sans-serif; }
+.font-montserrat { font-family: 'Montserrat', sans-serif; }
+.font-nunito { font-family: 'Nunito', sans-serif; }
+.font-open-sans { font-family: 'Open Sans', sans-serif; }
+.font-arvo { font-family: 'Arvo', serif; }
+.font-titillium-web { font-family: 'Titillium Web', sans-serif; }
+.font-pt-sans { font-family: 'PT Sans', sans-serif; }
+.font-noto-sans { font-family: 'Noto Sans', sans-serif; }
+.font-roboto { font-family: 'Roboto', sans-serif; }
