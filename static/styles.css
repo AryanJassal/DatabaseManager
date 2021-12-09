@@ -1,8 +1,9 @@
 .content-container
 {
     border-radius: 1em;
-    border: 1px solid rgb(62, 68, 70);
+    border: 1px solid darkgray;
     padding: 2em !important;
+    box-shadow: 0 0 7px 1px gray;
 }
 
 .form-field-wrapper
