@@ -17,11 +17,49 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.0/umd/popper.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/js/bootstrap.min.js"></script>
         <script src="{% static 'chosen/chosen.jquery.min.js' %}"></script>
+        <script src="{% static 'script.js' %}"></script>
 
         <title>Database Manager</title>
     </head>
     <body>
-        <div class="container-fluid mt-5">
+        <nav class="navbar navbar-light bg-light navbar-expand-md">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand me-5">Database Management</a>
+
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav ms-3 me-auto mb-2">
+                        <li class="nav-item dropdown px-4">
+                            <a href="#" class="nav-link dropdown-toggle" id="navbarBookDropdown" role="button" data-toggle="dropdown" aria-expanded="false">Books</a>
+
+                            <ul class="dropdown-menu dropdown-menu-center" aria-labelledby="navbarBookDropdown">
+                                <li><a href="{% url 'books' %}" class="dropdown-item">Add a book entry</a></li>
+                                <li><a href="{% url 'all_books' %}" class="dropdown-item">Show all book entries</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown px-4">
+                            <a href="#" class="nav-link dropdown-toggle" id="navbarGameDropdown" role="button" data-toggle="dropdown" aria-expanded="false">Games</a>
+
+                            <ul class="dropdown-menu dropdown-menu-center" aria-labelledby="navbarGameDropdown">
+                                <li><a href="{% url 'games' %}" class="dropdown-item">Add a game entry</a></li>
+                                <li><a href="{% url 'all_games' %}" class="dropdown-item">Show all game entries</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown px-4">
+                            <a href="#" class="nav-link dropdown-toggle" id="navbarMovieDropdown" role="button" data-toggle="dropdown" aria-expanded="false">Movies</a>
+
+                            <ul class="dropdown-menu dropdown-menu-center" aria-labelledby="navbarMovieDropdown">
+                                <li><a href="{% url 'movies' %}" class="dropdown-item">Add a movie entry</a></li>
+                                <li><a href="{% url 'all_movies' %}" class="dropdown-item">Show all movie entries</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-fluid my-5">
             <div class="row align-items-center justify-content-center h-100">
                 <div class="col-8 h-100 content-container">
                     {% block body %}

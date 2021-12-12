@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <h1>All {{ category_name }} entries</h1>
+    <h2 class="total-entries">Number of total entries: {{ num_entries }}</h2>
+    <hr>
+
+    <div class="entries-container">
+        {% for object in objects %}
+            <div class="entry mt-3 p-2">
+                <div class="head-text fw-bold">
+                    {% if object.creator %} 
+                        <p>[{{ category_name.capitalize }}] <i>{{ object.title }}</i> by <i>{{ object.creator }}</i></p>
+                    {% elif object.title %}
+                        <p>[{{ category_name.capitalize }}] <i>{{ object.title }}</i></p>
+                    {% else %}
+                        <p>[{{ category_name.capitalize }}] Not enough information provided.</p>
+                    {% endif %}
+                </div>
+                <hr>
+                <div class="details-text">
+                    <ul>
+                        {% if object.release_date %}
+                            <li>Released on: {{ object.release_date }}</li>
+                        {% endif %}
+    
+                        {% if object.creator %}
+                            <li>Created by: {{ object.creator }}</li>
+                        {% endif %}
+    
+                        {% if object.published_by %}
+                            <li>Published by: {{ object.published_by }}</li>
+                        {% endif %}
+    
+                        {% if object.isbn %}
+                            <li>ISBN: {{ object.isbn }}</li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        {% empty %}
+            <h3 class="mt-5 ms-3">No entries found.</h2>
+        {% endfor %}
+    </div>
+
+    {% if objects.has_other_pages %}
+        <div class="container px-4 mt-5">
+            <ul class="pagination justify-content-center">
+                {% if objects.has_previous %}
+                    <li class="page-item"><a class="page-link" href="?page={{ objects.previous_page_number }}"><span class="fa fa-angle-left"></span></a></li>
+                {% else %}
+                    <li class="page-item disabled"><span class="page-link"><span class="fa fa-angle-left"></span></span></li>
+                {% endif %}
+
+                {% for i in objects.paginator.page_range %}
+                    {% if objects.number == i %}
+                        <li class="page-item active"><span class="page-link">{{ i }}</span></li>
+                    {% else %}
+                        <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+                    {% endif %}
+                {% endfor %}
+
+                {% if objects.has_next %}
+                    <li class="page-item"><a class="page-link" href="?page={{ objects.next_page_number }}"><span class="fa fa-angle-right"></span></a></li>
+                {% else %}
+                    <li class="page-item disabled"><span class="page-link"><span class="fa fa-angle-right"></span></span></li>
+                {% endif %}
+            </ul>
+        </div>
+    {% endif %}
+
+{% endblock %}
